@@ -50,22 +50,4 @@ public class Server {
             throw new RuntimeException(e);
         }
     }
-
-    public void closeEveryThing(Socket socket,BufferedReader bufferedReader,BufferedWriter bufferedWriter){
-        try {
-            if (bufferedReader != null){
-                bufferedReader.close();
-            }
-            if (socket != null){
-                socket.close();
-            }
-            if (bufferedWriter != null){
-                bufferedWriter.close();
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-
 }

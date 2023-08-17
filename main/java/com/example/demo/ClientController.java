@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class ClientController implements Initializable {
@@ -57,14 +58,12 @@ public class ClientController implements Initializable {
         btnSend.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                System.out.println(actionEvent.getEventType());
                 String messageToSend = tf_mess.getText();
                 if (!messageToSend.isEmpty()) {
                     HBox hBox = new HBox();
                     hBox.setAlignment(Pos.CENTER_RIGHT);
 
                     hBox.setPadding(new Insets(5, 5, 5, 10));
-
 
                     Text text = new Text(messageToSend);
                     TextFlow textFlow = new TextFlow(text);
@@ -95,6 +94,16 @@ public class ClientController implements Initializable {
             }
         });
     }
+    public static void addPreviousText(){
+        ArrayList<Data> list = new ArrayList<>();
+        Data mess1 = new Data("client","client contet");
+        Data mess2 = new Data("server","server contet");
+        Data mess3 = new Data("client","client contet");
+        Data mess4 = new Data("server","server contet");
+
+
+    }
+
 
 
 }
